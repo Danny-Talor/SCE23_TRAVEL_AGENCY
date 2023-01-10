@@ -1,0 +1,13 @@
+{
+    "name": "scripts",
+    "private": true,
+    "version": "0.0.0",
+    "author": "Danny Tal'or && Sagie Kerner",
+    "license": "ISC",
+    "scripts": {
+        "start": "start.bat",
+        "postclone": "postclone.bat",
+        "controller-install": "npm install --prefix controller && npm install --prefix view && npm run build --prefix view",
+        "controller-deploy": "npm start --prefix controller"
+    }
+}

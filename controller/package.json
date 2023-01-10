@@ -1,0 +1,21 @@
+{
+  "name": "controller",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Danny Tal'or && Sagie Kerner",
+  "license": "ISC",
+  "main": "controller.js",
+  "scripts": {
+    "dev": "nodemon controller.js",
+    "start": "node controller.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "nodemon": "^2.0.20",
+    "scripts": "file:.."
+  }
+}

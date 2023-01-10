@@ -1,0 +1,12 @@
+.flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius:2px ;
+    flex-direction: column;
+}
+.my-modal {
+    width: 40vw !important;;    
+    max-width: 90vw;
+} 
