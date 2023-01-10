@@ -1,6 +1,13 @@
 ## Intro to Computer Networking 
 ### 2023 Semester A Project "Travel Agency"
 
+#### Technologies used:
+<a href="https://www.mongodb.com/"><img src="https://img.icons8.com/color/512/mongodb.png" alt="MongoDB" style="width: 64px; height: 64px;"/></a>
+<a href="https://expressjs.com/"><img src="https://img.icons8.com/nolan/512/express-js.png" alt="Express.js" style="width: 64px; height: 64px;"/></a>
+<a href="https://reactjs.org/"><img src="https://img.icons8.com/color/512/react-native.png" alt="React.js" style="width: 64px; height: 64px;"/></a>
+<a href="https://nodejs.org/"><img src="https://img.icons8.com/fluency/512/node-js.png" alt="Node.js" style="width: 64px; height: 64px;"/></a>
+
+
 #### Requirements
 * [Node.js](https://nodejs.org/en/)
 
