@@ -6,7 +6,8 @@
 <a href="https://expressjs.com/"><img src="https://img.icons8.com/nolan/512/express-js.png" alt="Express.js" style="width: 64px; height: 64px;"/></a>
 <a href="https://reactjs.org/"><img src="https://img.icons8.com/color/512/react-native.png" alt="React.js" style="width: 64px; height: 64px;"/></a>
 <a href="https://nodejs.org/"><img src="https://img.icons8.com/fluency/512/node-js.png" alt="Node.js" style="width: 64px; height: 64px;"/></a>
-
+<a href="https://vitejs.dev/"><img src="https://vitejs.dev/logo-with-shadow.png" alt="Vite.js" style="width: 64px; height: 64px;"/></a>
+<a href="https://react-bootstrap.github.io/"><img src="https://raw.githubusercontent.com/react-bootstrap/react-bootstrap/80b9167b35da27e381f5a60205a74c2e2730e676/www/static/logo.svg" alt="React Bootstrap" style="width: 64px; height: 64px;"/></a>
 
 #### Requirements
 * [Node.js](https://nodejs.org/en/)
