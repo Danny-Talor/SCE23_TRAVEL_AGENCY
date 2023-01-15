@@ -68,6 +68,16 @@ export default function EditFlightButton(props) {
         )
     }
 
+    const handleCloseModal = () => {
+        setShowModal(false)
+        setDepartureCountry(flightObj.origin)
+        setDepartureDate(new Date(flightObj.departDate))
+        setArrivalDate(new Date(flightObj.arriveDate))
+        setArrivalCountry(flightObj.destination)
+        setFlightSeatsNum(flightObj.seats.length)
+        setFlightPrice(flightObj.price)
+    }
+
     const isValidFlight = () => {
         return departureCountry.label &&
             arrivalCountry.label &&
@@ -154,7 +164,7 @@ export default function EditFlightButton(props) {
         <>
             <Button onClick={() => setShowModal(true)}>edit</Button>
 
-            <Modal show={showModal} onHide={() => setShowModal(false)}>
+            <Modal show={showModal} onHide={() => handleCloseModal()}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit flight</Modal.Title>
                 </Modal.Header>
