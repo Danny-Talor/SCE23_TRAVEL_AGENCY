@@ -14,7 +14,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function SearchBar(props) {
   const [origin, setOrigin] = useState({}); //holds the data from the reqest
-  const [ways, setWays] = useState(1);
+  const [ways, setWays] = useState(0);
   const [destination, setdestention] = useState({});
   const [startdate, setstartdate] = useState(new Date());
   const [startPrice, setStartPrice] = useState(0);
@@ -31,10 +31,32 @@ export default function SearchBar(props) {
       />
     );
   };
+const validator=()=>{
+  if ( ways === 0 ){
+    alert("please fill ways  field")
+    return false;
+  }
+  if ( origin.value===undefined ){
+
+    alert("please fill origin  field")
+    return false;
+  } 
+  if ( destination.value===undefined){
+    alert("please fill destination  field")
+    return false;
+  }
+  if ( startPrice >= endPrice ){
+    alert("please fill to price that bigger then from prcie field")
+    return false;
+  }
+
+  return true;
+}
 
   const handleSubmit = (event) => {
     event.stopPropagation(); //stops form onSubmit from firing when opening/closing modal
-    event.preventDefault(); //stops page from refreshing
+    event.preventDefault();
+    if (validator()) {
     const api = `/api/searchFlight/${origin.value}/${destination.value}/${startdate}/${startPrice}/${endPrice}/${ways}`;
     const requestOptions = {
       method: "get",
@@ -44,6 +66,7 @@ export default function SearchBar(props) {
       .then((response) => response.json())
       .then((data) => { props.setflightsList(data) })
       .catch((err) => console.log(err));
+  }
   };
   const renderCountryPicker = (get, set) => {
     return <Select options={countries} value={get} onChange={set} required />;
@@ -69,7 +92,7 @@ export default function SearchBar(props) {
                   label="one way"
                   name="group1"
                   type="radio"
-                  value="1"
+                  
                   onChange={() => {
                     setWays(1)
                   }}
@@ -79,7 +102,7 @@ export default function SearchBar(props) {
                   label="two way"
                   name="group1"
                   type="radio"
-                  value="1"
+                  
                   onChange={() => {
                     setWays(2)
                   }}
@@ -90,6 +113,7 @@ export default function SearchBar(props) {
               <Form.Group controlId="origin">
                 <Form.Label>origin</Form.Label>
                 {renderCountryPicker(origin, setOrigin)}
+                
               </Form.Group>
             </Col>
             <Col xs={6} md={3}>
@@ -131,6 +155,7 @@ export default function SearchBar(props) {
                       setEndPrice(e.target.value);
                     }}
                     type="number"
+                    
                   />
                 </InputGroup>
               </Form.Group>
