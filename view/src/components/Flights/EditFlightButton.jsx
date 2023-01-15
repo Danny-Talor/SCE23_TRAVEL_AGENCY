@@ -7,6 +7,8 @@ import countryList from 'react-select-country-list'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 
+import UtilityFunctions from '../../UtilityFunctions'
+
 export default function EditFlightButton(props) {
     const flightObj = props.flightObj
     const [showModal, setShowModal] = useState(false)
